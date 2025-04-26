@@ -1,7 +1,6 @@
 const express = require('express');
 const mongoose = require('mongoose');
 const cors = require('cors');
-const serverless = require('serverless-http');
 
 const app = express();
 app.use(express.json());
@@ -108,5 +107,4 @@ app.get('/sales', async (req, res) => {
 });
 
 const PORT = 5000;
-module.exports = app;
-module.exports = serverless(app);
+app.listen(PORT, () => console.log(`🚀 Servidor corriendo en el puerto ${PORT}`));
