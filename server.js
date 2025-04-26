@@ -107,4 +107,4 @@ app.get('/sales', async (req, res) => {
 });
 
 const PORT = 5000;
-app.listen(PORT, () => console.log(`🚀 Servidor corriendo en el puerto ${PORT}`));
+module.exports = app;
